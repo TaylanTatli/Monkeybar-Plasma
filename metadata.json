@@ -1,0 +1,24 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "taylan@tatli.me",
+        "Name": "TaylanTatli"
+      },
+      {
+        "Email": "aryan@aroice.in",
+        "Name": "Aryan Techie (AROICE)"
+      }
+    ],
+    "Category": "System Information",
+    "Description": "Track Monkeytype activity in your Plasma panel",
+    "Icon": "input-keyboard",
+    "Id": "com.github.taylantatli.monkeybar",
+    "Name": "MonkeyBar",
+    "Version": "1.0",
+    "Website": "https://github.com/TaylanTatli/monkeybar-plasma",
+    "BugReportUrl": "https://github.com/TaylanTatli/monkeybar-plasma/issues"
+  },
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "KPackageStructure": "Plasma/Applet"
+}
