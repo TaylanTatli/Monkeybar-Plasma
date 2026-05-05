@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-05 18:14+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contents/ui/configGeneral.qml:31
+msgid "Monkeytype username"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:32
+msgid "Username"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:37 ../contents/ui/configGeneral.qml:39
+msgid "ApeKey"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:47
+msgid "Days to show"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:56
+msgid "15 minutes"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:57
+msgid "30 minutes"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:58
+msgid "1 hour"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:59
+msgid "2 hours"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:60
+msgid "4 hours"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:61
+msgid "6 hours"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:62
+msgid "12 hours"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:63
+msgid "24 hours"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:67
+msgid "Refresh interval"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:76
+msgid "Sunday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:77
+msgid "Monday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:78
+msgid "Tuesday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:79
+msgid "Wednesday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:80
+msgid "Thursday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:81
+msgid "Friday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:82
+msgid "Saturday"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:86
+msgid "Week start day"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:95
+msgid "Monkeytype"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:96
+msgid "GitHub Green"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:97
+msgid "Halloween"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:98
+msgid "Teal"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:99
+msgid "@left_pad"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:100
+msgid "Dracula"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:101
+msgid "Blue"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:102
+msgid "Panda"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:103
+msgid "Sunny"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:104
+msgid "Pink"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:105
+msgid "Solarized Dark"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:106
+msgid "Solarized Light"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:110
+msgid "Theme"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:119
+msgid "Opacity"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:120
+msgid "Grade"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:124
+msgid "Color mode"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:133
+msgid "Flexible"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:134
+msgid "Fixed"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:138
+msgid "Size mode"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:147
+msgid "Fixed width (px)"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:152
+msgid "Show current week only"
+msgstr ""
+
+#: ../contents/ui/configGeneral.qml:157
+msgid "Highlight current day"
+msgstr ""
+
+#: ../contents/ui/main.qml:36 ../contents/ui/main.qml:70
+#: ../contents/ui/main.qml:174 ../contents/ui/main.qml:185
+#: ../contents/ui/main.qml:196 ../contents/ui/main.qml:216
+msgid "MonkeyBar"
+msgstr ""
+
+#: ../contents/ui/main.qml:37
+msgid "Waiting for data"
+msgstr ""
+
+#: ../contents/ui/main.qml:75
+msgid "Refresh Now"
+msgstr ""
+
+#: ../contents/ui/main.qml:80 ../contents/ui/main.qml:372
+msgid "Open Monkeytype"
+msgstr ""
+
+#: ../contents/ui/main.qml:85
+msgid "Open Profile"
+msgstr ""
+
+#: ../contents/ui/main.qml:102
+msgid "test"
+msgstr ""
+
+#: ../contents/ui/main.qml:102
+msgid "tests"
+msgstr ""
+
+#: ../contents/ui/main.qml:105
+msgid "Today: %1 %2"
+msgstr ""
+
+#: ../contents/ui/main.qml:108
+msgid "%1 %2: %3 %4"
+msgstr ""
+
+#: ../contents/ui/main.qml:175
+msgid "Set your Monkeytype username to open a profile"
+msgstr ""
+
+#: ../contents/ui/main.qml:191
+msgid "Set your Monkeytype username in settings"
+msgstr ""
+
+#: ../contents/ui/main.qml:197
+msgid "Refreshing activity..."
+msgstr ""
+
+#: ../contents/ui/main.qml:208
+msgid "Current streak: %1 day(s)"
+msgstr ""
+
+#: ../contents/ui/main.qml:209
+msgid "Max streak: %1 day(s)"
+msgstr ""
+
+#: ../contents/ui/main.qml:217
+msgid "Updated: Last %1 day(s)"
+msgstr ""
+
+#: ../contents/ui/main.qml:221
+msgid "No test data available"
+msgstr ""
+
+#: ../contents/ui/main.qml:226
+msgid "Failed to load Monkeytype activity"
+msgstr ""
+
+#: ../contents/ui/main.qml:351
+msgid "Streak: <b>%1</b> (Max: %2)"
+msgstr ""
+
+#: ../contents/ui/main.qml:364
+msgid "Refresh"
+msgstr ""
+
+#: ../contents/ui/main.qml:380
+msgid "Profile"
+msgstr ""
+
+#: ../contents/config/config.qml:6
+msgid "General"
+msgstr ""

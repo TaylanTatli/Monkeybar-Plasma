@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-05 18:14+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contents/ui/configGeneral.qml:31
+msgid "Monkeytype username"
+msgstr "Monkeytype kullanıcı adı"
+
+#: ../contents/ui/configGeneral.qml:32
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: ../contents/ui/configGeneral.qml:37 ../contents/ui/configGeneral.qml:39
+msgid "ApeKey"
+msgstr "ApeKey"
+
+#: ../contents/ui/configGeneral.qml:47
+msgid "Days to show"
+msgstr "Gösterilecek günler"
+
+#: ../contents/ui/configGeneral.qml:56
+msgid "15 minutes"
+msgstr "15 dakika"
+
+#: ../contents/ui/configGeneral.qml:57
+msgid "30 minutes"
+msgstr "30 dakika"
+
+#: ../contents/ui/configGeneral.qml:58
+msgid "1 hour"
+msgstr "1 saat"
+
+#: ../contents/ui/configGeneral.qml:59
+msgid "2 hours"
+msgstr "2 saat"
+
+#: ../contents/ui/configGeneral.qml:60
+msgid "4 hours"
+msgstr "4 saat"
+
+#: ../contents/ui/configGeneral.qml:61
+msgid "6 hours"
+msgstr "6 saat"
+
+#: ../contents/ui/configGeneral.qml:62
+msgid "12 hours"
+msgstr "12 saat"
+
+#: ../contents/ui/configGeneral.qml:63
+msgid "24 hours"
+msgstr "24 saat"
+
+#: ../contents/ui/configGeneral.qml:67
+msgid "Refresh interval"
+msgstr "Yenileme aralığı"
+
+#: ../contents/ui/configGeneral.qml:76
+msgid "Sunday"
+msgstr "Pazar"
+
+#: ../contents/ui/configGeneral.qml:77
+msgid "Monday"
+msgstr "Pazartesi"
+
+#: ../contents/ui/configGeneral.qml:78
+msgid "Tuesday"
+msgstr "Salı"
+
+#: ../contents/ui/configGeneral.qml:79
+msgid "Wednesday"
+msgstr "Çarşamba"
+
+#: ../contents/ui/configGeneral.qml:80
+msgid "Thursday"
+msgstr "Perşembe"
+
+#: ../contents/ui/configGeneral.qml:81
+msgid "Friday"
+msgstr "Cuma"
+
+#: ../contents/ui/configGeneral.qml:82
+msgid "Saturday"
+msgstr "Cumartesi"
+
+#: ../contents/ui/configGeneral.qml:86
+msgid "Week start day"
+msgstr "Haftanın başlangıç günü"
+
+#: ../contents/ui/configGeneral.qml:95
+msgid "Monkeytype"
+msgstr "Monkeytype"
+
+#: ../contents/ui/configGeneral.qml:96
+msgid "GitHub Green"
+msgstr "Github Yeşili"
+
+#: ../contents/ui/configGeneral.qml:97
+msgid "Halloween"
+msgstr "Cadılar Bayramı"
+
+#: ../contents/ui/configGeneral.qml:98
+msgid "Teal"
+msgstr "Turkuaz"
+
+#: ../contents/ui/configGeneral.qml:99
+msgid "@left_pad"
+msgstr "@left_pad"
+
+#: ../contents/ui/configGeneral.qml:100
+msgid "Dracula"
+msgstr "Dracula"
+
+#: ../contents/ui/configGeneral.qml:101
+msgid "Blue"
+msgstr "Mavi"
+
+#: ../contents/ui/configGeneral.qml:102
+msgid "Panda"
+msgstr "Panda"
+
+#: ../contents/ui/configGeneral.qml:103
+msgid "Sunny"
+msgstr "Güneşli"
+
+#: ../contents/ui/configGeneral.qml:104
+msgid "Pink"
+msgstr "Pembe"
+
+#: ../contents/ui/configGeneral.qml:105
+msgid "Solarized Dark"
+msgstr "Solarize Koyu"
+
+#: ../contents/ui/configGeneral.qml:106
+msgid "Solarized Light"
+msgstr "Solarize Açık"
+
+#: ../contents/ui/configGeneral.qml:110
+msgid "Theme"
+msgstr "Tema"
+
+#: ../contents/ui/configGeneral.qml:119
+msgid "Opacity"
+msgstr "Şeffaflık"
+
+#: ../contents/ui/configGeneral.qml:120
+msgid "Grade"
+msgstr "Grade"
+
+#: ../contents/ui/configGeneral.qml:124
+msgid "Color mode"
+msgstr "Renk modu"
+
+#: ../contents/ui/configGeneral.qml:133
+msgid "Flexible"
+msgstr "Esnek"
+
+#: ../contents/ui/configGeneral.qml:134
+msgid "Fixed"
+msgstr "Sabit"
+
+#: ../contents/ui/configGeneral.qml:138
+msgid "Size mode"
+msgstr "Sabit mod"
+
+#: ../contents/ui/configGeneral.qml:147
+msgid "Fixed width (px)"
+msgstr "Sabit genişlik (px)"
+
+#: ../contents/ui/configGeneral.qml:152
+msgid "Show current week only"
+msgstr "Sadece mevcut haftayı göster"
+
+#: ../contents/ui/configGeneral.qml:157
+msgid "Highlight current day"
+msgstr "Bugünü işaretle"
+
+#: ../contents/ui/main.qml:36 ../contents/ui/main.qml:70
+#: ../contents/ui/main.qml:174 ../contents/ui/main.qml:185
+#: ../contents/ui/main.qml:196 ../contents/ui/main.qml:216
+msgid "MonkeyBar"
+msgstr "MonkeyBar"
+
+#: ../contents/ui/main.qml:37
+msgid "Waiting for data"
+msgstr "Veri bekleniyor"
+
+#: ../contents/ui/main.qml:75
+msgid "Refresh Now"
+msgstr "Şimdi Yenile"
+
+#: ../contents/ui/main.qml:80 ../contents/ui/main.qml:372
+msgid "Open Monkeytype"
+msgstr "Monkeytype'ı Aç"
+
+#: ../contents/ui/main.qml:85
+msgid "Open Profile"
+msgstr "Profili Aç"
+
+#: ../contents/ui/main.qml:102
+msgid "test"
+msgstr "test"
+
+#: ../contents/ui/main.qml:102
+msgid "tests"
+msgstr "test"
+
+#: ../contents/ui/main.qml:105
+msgid "Today: %1 %2"
+msgstr "Bugün: %1 %2"
+
+#: ../contents/ui/main.qml:108
+msgid "%1 %2: %3 %4"
+msgstr "%1 %2: %3 %4"
+
+#: ../contents/ui/main.qml:175
+msgid "Set your Monkeytype username to open a profile"
+msgstr "Bir profil açmak için Monkeytype kullanıcı adınızı ayarlayın"
+
+#: ../contents/ui/main.qml:191
+msgid "Set your Monkeytype username in settings"
+msgstr "Ayarlardan Monkeytype kullanıcı adınızı ayarlayın"
+
+#: ../contents/ui/main.qml:197
+msgid "Refreshing activity..."
+msgstr "Aktivite yenileniyor..."
+
+#: ../contents/ui/main.qml:208
+msgid "Current streak: %1 day(s)"
+msgstr "Mevcut seri: %1 gün"
+
+#: ../contents/ui/main.qml:209
+msgid "Max streak: %1 day(s)"
+msgstr "Maks Seri: %1 gün"
+
+#: ../contents/ui/main.qml:217
+msgid "Updated: Last %1 day(s)"
+msgstr "Güncellendi: Son %1 gün"
+
+#: ../contents/ui/main.qml:221
+msgid "No test data available"
+msgstr "Kullanılabilir test verisi yok"
+
+#: ../contents/ui/main.qml:226
+msgid "Failed to load Monkeytype activity"
+msgstr "Monkeytype aktitivesi yüklenemedi"
+
+#: ../contents/ui/main.qml:351
+msgid "Streak: <b>%1</b> (Max: %2)"
+msgstr "Seri: <b>%1</b> (Maks: %2)"
+
+#: ../contents/ui/main.qml:364
+msgid "Refresh"
+msgstr "Yenile"
+
+#: ../contents/ui/main.qml:380
+msgid "Profile"
+msgstr "Profil"
+
+#: ../contents/config/config.qml:6
+msgid "General"
+msgstr "Genel"
