@@ -25,8 +25,6 @@ PlasmoidItem {
     property string shortcutRefresh: plasmoid.configuration.shortcutRefresh || ""
     property string shortcutOpenMonkeytype: plasmoid.configuration.shortcutOpenMonkeytype || ""
     property string shortcutOpenProfile: plasmoid.configuration.shortcutOpenProfile || ""
-
-    // Size mode: "flexible" (default) or "fixed"; fixedWidth in pixels
     property string sizeMode: plasmoid.configuration.sizeMode || "flexible"
     property int fixedWidth: plasmoid.configuration.fixedWidth || Math.max(daysToShow * (boxSize + boxMargin), 100)
 
@@ -283,117 +281,104 @@ PlasmoidItem {
 
     fullRepresentation: Item {
         id: fullRoot
-        implicitWidth: contentColumn.implicitWidth
-        implicitHeight: contentColumn.implicitHeight
-        Layout.preferredWidth: sizeMode === "fixed" ? fixedWidth : implicitWidth
-        Layout.preferredHeight: implicitHeight
+        implicitWidth: Kirigami.Units.gridUnit * 14
+        implicitHeight: contentColumn.implicitHeight + (Kirigami.Units.smallSpacing * 2)
 
         ColumnLayout {
             id: contentColumn
-            anchors.fill: parent
+            anchors {
+                fill: parent
+                margins: Kirigami.Units.mediumSpacing
+            }
             spacing: Kirigami.Units.smallSpacing
 
             RowLayout {
                 Layout.fillWidth: true
-
                 ColumnLayout {
-                    Layout.fillWidth: true
                     spacing: 0
-
                     PlasmaExtras.Heading {
                         Layout.fillWidth: true
-                        level: 2
+                        level: 4
                         text: root.statusTitle
                     }
-
                     PlasmaComponents3.Label {
                         Layout.fillWidth: true
                         text: root.statusSubtitle
-                        wrapMode: Text.WordWrap
+                        font.pixelSize: Kirigami.Units.gridUnit * 0.7
+                        opacity: 0.7
                     }
                 }
-
                 PlasmaComponents3.BusyIndicator {
                     running: root.busy
                     visible: root.busy
+                    Layout.preferredWidth: Kirigami.Units.gridUnit
+                    Layout.preferredHeight: Kirigami.Units.gridUnit
                 }
             }
 
-            PlasmaComponents3.ScrollView {
-                Layout.fillWidth: true
-                Layout.preferredHeight: Math.min(implicitHeight, activityList.implicitHeight + (root.busy ? 0 : 0))
+            ColumnLayout {
+              id: activityList
+              Layout.fillWidth: true
+              spacing: Kirigami.Units.smallSpacing
 
-                ColumnLayout {
-                    id: activityList
-                    width: parent.width
-                    spacing: Kirigami.Units.xSmallSpacing
-
-                    Repeater {
-                        model: root.activityData
-
-                        delegate: RowLayout {
-                            required property var modelData
-
-                            Layout.fillWidth: true
-                            spacing: Kirigami.Units.smallSpacing
-
-                            Rectangle {
-                                width: root.boxSize * 1.5
-                                height: root.boxSize * 1.5
-                                radius: root.borderRadius
-                                color: root.baseColorForCount(modelData.count)
-                                opacity: root.opacityForCount(modelData.count)
-                                border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-                                border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#ffffff99" : "#ffffff14"
-                            }
-
-                            PlasmaComponents3.Label {
-                                Layout.fillWidth: true
-                                text: root.formatDate(modelData.date, modelData.count)
-                                wrapMode: Text.WordWrap
-                            }
-                        }
-                    }
-
-                    ColumnLayout {
+                Repeater {
+                    model: root.activityData
+                    delegate: RowLayout {
                         Layout.fillWidth: true
+                        spacing: Kirigami.Units.smallSpacing
 
-                        PlasmaExtras.Heading {
-                            Layout.fillWidth: true
-                            level: 3
-                            text: i18n("Current streak: %1 day(s)", root.currentStreak)
+                        Rectangle {
+                            width: root.boxSize
+                            height: root.boxSize
+                            radius: root.borderRadius
+                            color: root.baseColorForCount(modelData.count)
+                            opacity: root.opacityForCount(modelData.count)
+                            border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
+                            border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "white" : "transparent"
                         }
 
                         PlasmaComponents3.Label {
                             Layout.fillWidth: true
-                            text: i18n("Max streak: %1 day(s)", root.maxStreak)
+                            text: root.formatDate(modelData.date, modelData.count)
+                            font.pixelSize: Kirigami.Units.gridUnit * 0.8
                         }
                     }
+                }
+            }
+              PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                text: i18n("Streak: <b>%1</b> (Max: %2)", root.currentStreak, root.maxStreak)
+                textFormat: Text.RichText
+                font.pixelSize: Kirigami.Units.gridUnit * 0.8
+            }
 
-                    RowLayout {
-                        Layout.fillWidth: true
-                        spacing: Kirigami.Units.smallSpacing
+            RowLayout {
+                Layout.fillWidth: true
+                spacing: Kirigami.Units.smallSpacing
 
-                        PlasmaComponents3.ToolButton {
-                            text: i18n("Refresh Now")
-                            icon.name: "view-refresh"
-                            onClicked: root.refreshData()
-                        }
+                PlasmaComponents3.Button {
+                    Layout.fillWidth: true
+                    icon.name: "view-refresh"
+                    ToolTip.visible: hovered
+                    ToolTip.text: i18n("Refresh")
+                    onClicked: root.refreshData()
+                }
 
-                        PlasmaComponents3.ToolButton {
-                            visible: root.rightClickAction.length > 0
-                            text: i18n("Open Monkeytype")
-                            icon.name: "internet-services"
-                            onClicked: root.openMonkeytype()
-                        }
+                PlasmaComponents3.Button {
+                    Layout.fillWidth: true
+                    icon.name: "internet-services"
+                    ToolTip.visible: hovered
+                    ToolTip.text: i18n("Open Monkeytype")
+                    onClicked: root.openMonkeytype()
+                }
 
-                        PlasmaComponents3.ToolButton {
-                            visible: root.rightClickAction.length > 0
-                            text: i18n("Open Profile")
-                            icon.name: "internet-services"
-                            onClicked: root.openUserProfile()
-                        }
-                    }
+                PlasmaComponents3.Button {
+                    Layout.fillWidth: true
+                    icon.name: "user-identity"
+                    ToolTip.visible: hovered
+                    ToolTip.text: i18n("Profile")
+                    onClicked: root.openUserProfile()
                 }
             }
         }
