@@ -210,10 +210,8 @@ PlasmoidItem {
                 if (Array.isArray(activity) && activity.length === daysToShow) {
                     displayMode = "activity";
                     activityData = buildItems(activity);
-                    statusTitle = currentStreak > 0 || maxStreak > 0 ? i18n("Streak: %1 day(s)", currentStreak) : i18n("MonkeyBar");
-                    statusSubtitle = currentStreak > 0 || maxStreak > 0
-                        ? i18n("Max streak: %1 day(s)", maxStreak)
-                        : i18n("Updated: Last %1 day(s)", activity.length);
+                    statusTitle = i18n("MonkeyBar");
+                    statusSubtitle = i18n("Updated: Last %1 day(s)", activity.length);
                     return;
                 }
 
