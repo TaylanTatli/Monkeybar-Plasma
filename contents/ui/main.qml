@@ -181,6 +181,8 @@ PlasmoidItem {
 
     function setEmptyState(message) {
         displayMode = "empty";
+        currentStreak = 0;
+        maxStreak = 0;
         activityData = buildItems();
         statusTitle = i18n("MonkeyBar");
         statusSubtitle = message;
@@ -200,21 +202,26 @@ PlasmoidItem {
             .then(result => {
                 busy = false;
 
-                if (result && result.isStreakOnly) {
-                    displayMode = "streak";
-                    currentStreak = result.streak || 0;
-                    maxStreak = result.maxStreak || 0;
-                    activityData = buildItems();
-                    statusTitle = i18n("Current streak: %1 day(s)", currentStreak);
-                    statusSubtitle = i18n("Max streak: %1 day(s)", maxStreak);
+                currentStreak = result && typeof result.streak === "number" ? result.streak : 0;
+                maxStreak = result && typeof result.maxStreak === "number" ? result.maxStreak : 0;
+
+                const activity = Array.isArray(result) ? result : result && result.activity;
+
+                if (Array.isArray(activity) && activity.length === daysToShow) {
+                    displayMode = "activity";
+                    activityData = buildItems(activity);
+                    statusTitle = currentStreak > 0 || maxStreak > 0 ? i18n("Streak: %1 day(s)", currentStreak) : i18n("MonkeyBar");
+                    statusSubtitle = currentStreak > 0 || maxStreak > 0
+                        ? i18n("Max streak: %1 day(s)", maxStreak)
+                        : i18n("Updated: Last %1 day(s)", activity.length);
                     return;
                 }
 
-                if (Array.isArray(result) && result.length === daysToShow) {
-                    displayMode = "activity";
-                    activityData = buildItems(result);
-                    statusTitle = i18n("MonkeyBar");
-                    statusSubtitle = i18n("Updated: Last %1 day(s)", result.length);
+                if (currentStreak > 0 || maxStreak > 0) {
+                    displayMode = "streak";
+                    activityData = buildItems();
+                    statusTitle = i18n("Streak: %1 day(s)", currentStreak);
+                    statusSubtitle = i18n("Max streak: %1 day(s)", maxStreak);
                     return;
                 }
 

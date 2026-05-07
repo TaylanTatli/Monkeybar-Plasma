@@ -102,23 +102,20 @@ function parseTestActivity(testActivity, targetDates) {
     return targetDates.map(date => activityMap.get(date) || 0);
 }
 
-function fetchPublicProfile(username, targetDates) {
-    return requestJson(`https://api.monkeytype.com/users/${username}/profile`)
-        .then(result => {
-            if (!result || !result.data) {
-                throw new Error("Unexpected profile response");
-            }
+function buildProfilePayload(profileData, targetDates) {
+    return {
+        activity: profileData.testActivity ? parseTestActivity(profileData.testActivity, targetDates) : Array(targetDates.length).fill(0),
+        streak: profileData.streak || 0,
+        maxStreak: profileData.maxStreak || 0
+    };
+}
 
-            if (result.data.testActivity) {
-                return parseTestActivity(result.data.testActivity, targetDates);
-            }
-
-            return {
-                isStreakOnly: true,
-                streak: result.data.streak || 0,
-                maxStreak: result.data.maxStreak || 0
-            };
-        });
+function buildActivityPayload(profileData, activityData, targetDates) {
+    return {
+        activity: profileData.testActivity ? parseTestActivity(profileData.testActivity, targetDates) : parseTestActivity(activityData, targetDates),
+        streak: profileData.streak || 0,
+        maxStreak: profileData.maxStreak || 0
+    };
 }
 
 function fetchTypingActivity(username, apeKey, showCurrentWeekOnly, weekStartDay, daysToShow) {
@@ -138,20 +135,18 @@ function fetchTypingActivity(username, apeKey, showCurrentWeekOnly, weekStartDay
 
     const targetDates = getDates(true, showCurrentWeekOnly, weekStartDay, daysToShow);
 
-    try {
-        if (!apeKey) {
-            return fetchPublicProfile(username, targetDates);
-        }
-
-        return requestJson(`https://api.monkeytype.com/users/${username}/profile`, {
-            Authorization: `ApeKey ${apeKey}`
-        }).then(profileResult => {
-            if (!profileResult || !profileResult.data) {
-                throw new Error("Unexpected authenticated profile response");
+    return requestJson(`https://api.monkeytype.com/users/${username}/profile`, apeKey ? {
+        Authorization: `ApeKey ${apeKey}`
+    } : {})
+        .then(result => {
+            if (!result || !result.data) {
+                throw new Error("Unexpected profile response");
             }
 
-            if (profileResult.data.testActivity) {
-                return parseTestActivity(profileResult.data.testActivity, targetDates);
+            const profileData = result.data;
+
+            if (!apeKey) {
+                return buildProfilePayload(profileData, targetDates);
             }
 
             return requestJson("https://api.monkeytype.com/users/currentTestActivity", {
@@ -161,11 +156,15 @@ function fetchTypingActivity(username, apeKey, showCurrentWeekOnly, weekStartDay
                     throw new Error("Unexpected activity response");
                 }
 
-                return parseTestActivity(activityResult.data, targetDates);
+                return buildActivityPayload(profileData, activityResult.data, targetDates);
             });
+        })
+        .catch(error => {
+            console.error(`MonkeyBar: ${error}`);
+            return {
+                activity: Array(targetDates.length).fill(0),
+                streak: 0,
+                maxStreak: 0
+            };
         });
-    } catch (error) {
-        console.error(`MonkeyBar: ${error}`);
-        return Array(daysToShow).fill(0);
-    }
 }
