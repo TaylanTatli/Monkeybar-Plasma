@@ -12,7 +12,7 @@
 [![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-6-1D99F3?logo=kde)](https://store.kde.org/p/2358701/)
 [![Based on MonkeyBar](https://img.shields.io/badge/Based%20on-MonkeyBar-4A86CF)](https://github.com/AROICE-HQ/monkeybar)
 
-[Features](#-features) • [Installation](#-installation) • [Configuration](#-configuration) • [Themes](#-themes) • [Credits](#-credits)
+[Features](#features) • [Installation](#installation) • [Configuration](#configuration) • [Themes](#themes) • [Credits](#credits)
 
 <img src="screenshot.png" alt="MonkeyBar Screenshot" width="full" />
 
