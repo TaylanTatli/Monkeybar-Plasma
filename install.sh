@@ -5,8 +5,8 @@ ID=$(jq -r '.KPlugin.Id' metadata.json)
 echo "--- Installing MonkeyBar Plasmoid ---"
 
 if [ -d "translate" ]; then
-    echo "[1/3] Compiling translations..."
-    cd translate && sh ./build.sh && cd ..
+  echo "[1/3] Compiling translations..."
+  cd translate && sh ./build.sh && cd ..
 fi
 
 echo "[2/3] Checking for old version..."
