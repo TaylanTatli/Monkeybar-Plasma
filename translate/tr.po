@@ -159,7 +159,7 @@ msgstr "Şeffaflık"
 
 #: ../contents/ui/configGeneral.qml:120
 msgid "Grade"
-msgstr "Grade"
+msgstr "Kademe"
 
 #: ../contents/ui/configGeneral.qml:124
 msgid "Color mode"
