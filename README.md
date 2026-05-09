@@ -9,7 +9,7 @@
 *Track your typing activity with elegant visual feedback right in your top bar*
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-6-1D99F3?logo=kde)](https://kde.org/plasma-desktop/)
+[![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-6-1D99F3?logo=kde)](https://store.kde.org/p/2358701/)
 [![Based on MonkeyBar](https://img.shields.io/badge/Based%20on-MonkeyBar-4A86CF)](https://github.com/AROICE-HQ/monkeybar)
 
 [Features](#-features) • [Installation](#-installation) • [Configuration](#-configuration) • [Themes](#-themes) • [Credits](#-credits)
