@@ -17,7 +17,7 @@ PlasmoidItem {
     property string apeKey: plasmoid.configuration.monkeytypeApeKey || ""
     property int refreshInterval: plasmoid.configuration.refreshInterval || 21600
     property bool showCurrentWeekOnly: plasmoid.configuration.showCurrentWeekOnly || false
-    property string weekStartDay: plasmoid.configuration.weekStartDay || "monday"
+    property string weekStartDay: plasmoid.configuration.weekStartDay || ""
     property bool highlightCurrentDay: plasmoid.configuration.highlightCurrentDay || false
     property string themeName: plasmoid.configuration.themeName || "standard"
     property string colorMode: plasmoid.configuration.colorMode || "opacity"
@@ -146,7 +146,11 @@ PlasmoidItem {
     }
 
     function generateDates() {
-        return MonkeytypeService.getDates(false, showCurrentWeekOnly, weekDayNames[weekStartDay] || 1, daysToShow);
+        let weekStart = weekDayNames[weekStartDay];
+        if (weekStart === undefined) {
+            weekStart = Qt.locale().firstDayOfWeek;
+        }
+        return MonkeytypeService.getDates(false, showCurrentWeekOnly, weekStart, daysToShow);
     }
 
     function buildItems(counts) {
@@ -270,7 +274,12 @@ PlasmoidItem {
                     color: root.baseColorForCount(modelData.count)
                     opacity: root.opacityForCount(modelData.count)
                     border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-                    border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#ffffff99" : "#ffffff14"
+                    border.color: {
+                        if (root.highlightCurrentDay && root.isToday(modelData.date)) {
+                            return Kirigami.Theme.highlightColor;
+                        }
+                        return "transparent";
+                    }
                 }
             }
         }
