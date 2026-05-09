@@ -274,12 +274,7 @@ PlasmoidItem {
                     color: root.baseColorForCount(modelData.count)
                     opacity: root.opacityForCount(modelData.count)
                     border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-                    border.color: {
-                        if (root.highlightCurrentDay && root.isToday(modelData.date)) {
-                            return Kirigami.Theme.highlightColor;
-                        }
-                        return "transparent";
-                    }
+                    border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#1FFFFFFF"
                 }
             }
         }
@@ -348,7 +343,7 @@ PlasmoidItem {
                             color: root.baseColorForCount(modelData.count)
                             opacity: root.opacityForCount(modelData.count)
                             border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-                            border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "white" : "transparent"
+                            border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#1FFFFFFF"
                         }
 
                         PlasmaComponents3.Label {
