@@ -235,7 +235,7 @@ PlasmoidItem {
     }
 
     if (count === 0) {
-      return 1.0;
+      return 0.12;
     }
 
     return Math.min(0.2 + Math.min(count * 0.08, 0.8), 1.0);
@@ -368,7 +368,7 @@ PlasmoidItem {
           color: root.baseColorForCount(modelData.count)
           opacity: root.opacityForCount(modelData.count)
           border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-          border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#1FFFFFFF"
+          border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#14ffffff"
         }
       }
     }
@@ -437,7 +437,7 @@ PlasmoidItem {
               color: root.baseColorForCount(modelData.count)
               opacity: root.opacityForCount(modelData.count)
               border.width: root.highlightCurrentDay && root.isToday(modelData.date) ? 2 : 1
-              border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#1FFFFFFF"
+              border.color: root.highlightCurrentDay && root.isToday(modelData.date) ? "#99ffffff" : "#14ffffff"
             }
 
             PlasmaComponents3.Label {
